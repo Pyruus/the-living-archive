@@ -1,0 +1,6 @@
+@LivingArchive.API_HostAddress = http://localhost:5080
+
+GET {{LivingArchive.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

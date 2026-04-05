@@ -1,0 +1,31 @@
+# .NET
+**/bin/
+**/obj/
+*.user
+*.suo
+*.userprefs
+appsettings.Development.json
+
+# Uploads
+src/LivingArchive.API/uploads/*
+!src/LivingArchive.API/uploads/.gitkeep
+
+# Node / Angular
+client/node_modules/
+client/dist/
+client/.angular/
+client/.vscode/
+
+# IDE
+.idea/
+.vs/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local files
+design.html
+implementation_plan.md
+docs/
