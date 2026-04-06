@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────
+ * Google Fonts (Public Sans + Lexend + Material Symbols)
+ * ───────────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&family=Lexend:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+
+/* ─────────────────────────────────────────────────────────
+ * Material Symbols defaults
+ * ───────────────────────────────────────────────────────── */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* ─────────────────────────────────────────────────────────
+ * Design System utility classes
+ * ───────────────────────────────────────────────────────── */
+@layer components {
+  .glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+  }
+
+  .archival-gradient {
+    background: var(--gradient);
+  }
+}
+
+/* ==========================================================
+ * THEME: LIGHT (default)
+ * ========================================================== */
+:root,
+html.light {
+  color-scheme: light;
+
+  /* ── Core ── */
+  --color-primary: #003e6f;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #d2e4ff;
+  --color-on-primary-container: #001c37;
+  --color-primary-fixed: #d2e4ff;
+  --color-primary-fixed-dim: #a1c9ff;
+  --color-on-primary-fixed: #001c37;
+  --color-on-primary-fixed-variant: #004880;
+
+  /* ── Secondary ── */
+  --color-secondary: #595d73;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #dee1fb;
+  --color-on-secondary-container: #161b2d;
+  --color-secondary-fixed: #dee1fb;
+  --color-secondary-fixed-dim: #c2c5de;
+  --color-on-secondary-fixed: #161b2d;
+  --color-on-secondary-fixed-variant: #42465b;
+
+  /* ── Tertiary (Historical Brown) ── */
+  --color-tertiary: #642d00;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #ffdbc7;
+  --color-on-tertiary-container: #311300;
+  --color-tertiary-fixed: #ffdbc7;
+  --color-tertiary-fixed-dim: #ffb688;
+  --color-on-tertiary-fixed: #311300;
+  --color-on-tertiary-fixed-variant: #733500;
+
+  /* ── Error ── */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #410002;
+
+  /* ── Surface / Background ── */
+  --color-background: #fafaf5;
+  --color-on-background: #1a1c19;
+  --color-surface: #fafaf5;
+  --color-on-surface: #1a1c19;
+  --color-surface-variant: #e3e3de;
+  --color-on-surface-variant: #414750;
+  --color-surface-bright: #fafaf5;
+  --color-surface-dim: #dadad5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f4f4ef;
+  --color-surface-container: #eeeee9;
+  --color-surface-container-high: #e8e8e3;
+  --color-surface-container-highest: #e3e3de;
+  --color-surface-tint: #1961a1;
+
+  /* ── Outline ── */
+  --color-outline: #6b7079;
+  --color-outline-variant: #c1c7d2;
+
+  /* ── Inverse ── */
+  --color-inverse-surface: #2f312e;
+  --color-inverse-on-surface: #f1f1ec;
+  --color-inverse-primary: #a1c9ff;
+
+  /* ── Utilities ── */
+  --focus-ring: 0 0 0 3px rgba(0, 62, 111, 0.5);
+  --glass-bg: rgba(250, 250, 245, 0.8);
+  --glass-blur: blur(16px);
+  --gradient: linear-gradient(135deg, #003e6f 0%, #005696 100%);
+}
+
+/* ==========================================================
+ * THEME: DARK
+ * ========================================================== */
+html.dark {
+  color-scheme: dark;
+
+  /* ── Core ── */
+  --color-primary: #a1c9ff;
+  --color-on-primary: #003259;
+  --color-primary-container: #004880;
+  --color-on-primary-container: #d2e4ff;
+  --color-primary-fixed: #d2e4ff;
+  --color-primary-fixed-dim: #a1c9ff;
+  --color-on-primary-fixed: #001c37;
+  --color-on-primary-fixed-variant: #004880;
+
+  /* ── Secondary ── */
+  --color-secondary: #c2c5de;
+  --color-on-secondary: #2b3042;
+  --color-secondary-container: #42465b;
+  --color-on-secondary-container: #dee1fb;
+  --color-secondary-fixed: #dee1fb;
+  --color-secondary-fixed-dim: #c2c5de;
+  --color-on-secondary-fixed: #161b2d;
+  --color-on-secondary-fixed-variant: #42465b;
+
+  /* ── Tertiary (Historical Brown) ── */
+  --color-tertiary: #ffb688;
+  --color-on-tertiary: #4e2600;
+  --color-tertiary-container: #733500;
+  --color-on-tertiary-container: #ffdbc7;
+  --color-tertiary-fixed: #ffdbc7;
+  --color-tertiary-fixed-dim: #ffb688;
+  --color-on-tertiary-fixed: #311300;
+  --color-on-tertiary-fixed-variant: #733500;
+
+  /* ── Error ── */
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  /* ── Surface / Background ── */
+  --color-background: #111412;
+  --color-on-background: #e3e3de;
+  --color-surface: #111412;
+  --color-on-surface: #e3e3de;
+  --color-surface-variant: #414750;
+  --color-on-surface-variant: #c1c7d2;
+  --color-surface-bright: #373a36;
+  --color-surface-dim: #111412;
+  --color-surface-container-lowest: #0c0f0c;
+  --color-surface-container-low: #1a1c19;
+  --color-surface-container: #1e211e;
+  --color-surface-container-high: #282b28;
+  --color-surface-container-highest: #333633;
+  --color-surface-tint: #a1c9ff;
+
+  /* ── Outline ── */
+  --color-outline: #8b9199;
+  --color-outline-variant: #414750;
+
+  /* ── Inverse ── */
+  --color-inverse-surface: #e3e3de;
+  --color-inverse-on-surface: #2f312e;
+  --color-inverse-primary: #1961a1;
+
+  /* ── Utilities ── */
+  --focus-ring: 0 0 0 3px rgba(161, 201, 255, 0.6);
+  --glass-bg: rgba(17, 20, 18, 0.85);
+  --glass-blur: blur(16px);
+  --gradient: linear-gradient(135deg, #0d3b5e 0%, #1961a1 100%);
+}
+
+/* ==========================================================
+ * THEME: HIGH CONTRAST (WCAG 2.1 AAA-level)
+ * ========================================================== */
+html.high-contrast {
+  color-scheme: light;
+
+  /* ── Core ── */
+  --color-primary: #00264d;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #003e6f;
+  --color-on-primary-container: #ffffff;
+  --color-primary-fixed: #d2e4ff;
+  --color-primary-fixed-dim: #a1c9ff;
+  --color-on-primary-fixed: #000000;
+  --color-on-primary-fixed-variant: #003e6f;
+
+  /* ── Secondary ── */
+  --color-secondary: #2b3042;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #42465b;
+  --color-on-secondary-container: #ffffff;
+  --color-secondary-fixed: #dee1fb;
+  --color-secondary-fixed-dim: #c2c5de;
+  --color-on-secondary-fixed: #000000;
+  --color-on-secondary-fixed-variant: #2b3042;
+
+  /* ── Tertiary ── */
+  --color-tertiary: #4a1e00;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #642d00;
+  --color-on-tertiary-container: #ffffff;
+  --color-tertiary-fixed: #ffdbc7;
+  --color-tertiary-fixed-dim: #ffb688;
+  --color-on-tertiary-fixed: #000000;
+  --color-on-tertiary-fixed-variant: #4a1e00;
+
+  /* ── Error ── */
+  --color-error: #b00020;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #410002;
+
+  /* ── Surface / Background ── */
+  --color-background: #ffffff;
+  --color-on-background: #000000;
+  --color-surface: #ffffff;
+  --color-on-surface: #000000;
+  --color-surface-variant: #e0e0e0;
+  --color-on-surface-variant: #1a1a1a;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #d0d0d0;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f5f5;
+  --color-surface-container: #ebebeb;
+  --color-surface-container-high: #e0e0e0;
+  --color-surface-container-highest: #d6d6d6;
+  --color-surface-tint: #003e6f;
+
+  /* ── Outline ── */
+  --color-outline: #000000;
+  --color-outline-variant: #666666;
+
+  /* ── Inverse ── */
+  --color-inverse-surface: #000000;
+  --color-inverse-on-surface: #ffffff;
+  --color-inverse-primary: #a1c9ff;
+
+  /* ── Utilities ── */
+  --focus-ring: 0 0 0 4px #000000;
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --glass-blur: blur(0px);
+  --gradient: #00264d;
+
+  /* Enforce sharp borders for all interactive elements */
+  *:focus-visible {
+    outline: 3px solid #000000 !important;
+    outline-offset: 2px;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+ * Apply theme background/text to body
+ * ───────────────────────────────────────────────────────── */
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ─────────────────────────────────────────────────────────
+ * WCAG 2.1 AA: Global focus-visible styles
+ * ───────────────────────────────────────────────────────── */
+*:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* Ensure minimum tap-target of 44x44px (WCAG 2.5.8) */
+button,
+a,
+input,
+select,
+textarea,
+[role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Skip-to-content link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  padding: 1rem 1.5rem;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 700;
+  text-decoration: none;
+
+  &:focus {
+    top: 0;
+  }
+}
