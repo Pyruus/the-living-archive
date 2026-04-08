@@ -34,7 +34,10 @@ export class AuthService {
     if (!token) return null;
 
     try {
-      const payload = JSON.parse(atob(token.split('.')[1]));
+      const base64 = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
+      const payload = JSON.parse(decodeURIComponent(atob(base64).split('').map(
+        c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+      ).join('')));
 
       if (claim === 'role') {
         return payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role']

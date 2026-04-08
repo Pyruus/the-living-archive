@@ -6,6 +6,7 @@ export const HISTORICAL_PERIODS = [
   { value: '1945-1960', label: 'Okres Powojenny (1945–1960)' },
   { value: '1960-1980', label: 'Lata 60-te i 70-te' },
   { value: '1980-2000', label: 'Lata 80-te i 90-te' },
+  { value: '2000-present', label: 'Od 2000 do dziś' },
 ] as const;
 
 /** Only the selectable periods (without "all") — for upload/edit forms */
