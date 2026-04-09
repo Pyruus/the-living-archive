@@ -146,7 +146,7 @@ import { AuthService } from '../../core/services/auth.service';
           <div class="sticky top-24 bg-surface-container-lowest p-6 rounded-xl shadow-sm max-h-[calc(100vh-8rem)] overflow-y-auto">
             <h2 class="font-headline font-bold text-lg text-on-surface mb-4 flex items-center gap-2">
               <span class="material-symbols-outlined text-tertiary">account_tree</span>
-              Struktura lokalizacji
+              Lokalizacje
             </h2>
             <app-location-browser />
           </div>
