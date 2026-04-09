@@ -36,7 +36,7 @@ import { SearchService } from '../../../core/services/search.service';
             (click)="onNodeClick(country.id)">
             <span class="material-symbols-outlined text-xl">flag</span>
             <span class="font-bold flex-1">{{ country.name }}</span>
-            <span class="text-xs text-outline opacity-70">{{ country.photoCount }}</span>
+            <span class="text-xs opacity-80">{{ country.photoCount }}</span>
             @if (country.children.length) {
               <span
                 class="material-symbols-outlined text-lg transition-transform"
@@ -61,7 +61,7 @@ import { SearchService } from '../../../core/services/search.service';
                     (click)="onNodeClick(city.id)">
                     <span class="material-symbols-outlined text-lg">location_city</span>
                     <span class="font-medium flex-1">{{ city.name }}</span>
-                    <span class="text-xs text-outline opacity-70">{{ city.photoCount }}</span>
+                    <span class="text-xs opacity-80">{{ city.photoCount }}</span>
                     @if (city.children.length) {
                       <span
                         class="material-symbols-outlined text-base transition-transform"
@@ -84,7 +84,7 @@ import { SearchService } from '../../../core/services/search.service';
                           (click)="search.selectLocation(district.id)">
                           <span class="material-symbols-outlined text-base">holiday_village</span>
                           <span class="font-medium flex-1">{{ district.name }}</span>
-                          <span class="text-xs text-outline opacity-60">{{ district.photoCount }}</span>
+                          <span class="text-xs opacity-80">{{ district.photoCount }}</span>
                         </button>
                       }
                     </div>
