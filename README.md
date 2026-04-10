@@ -30,7 +30,7 @@ createdb living_archive
 cd src/LivingArchive.API
 
 # Konfiguracja User Secrets
-dotnet user-secrets set "ConnectionStrings:DefaultConnection" "Host=localhost;Database=living_archive;Username=postgres;Password=TWOJE_HASLO"
+dotnet user-secrets set "ConnectionStrings:DefaultConnection" "Host=localhost;Database=living_archive;Username=USERNAME;Password=TWOJE_HASLO"
 dotnet user-secrets set "Jwt:Secret" "TWOJ_KLUCZ_MIN_32_ZNAKI"
 dotnet user-secrets set "Jwt:Issuer" "LivingArchive"
 dotnet user-secrets set "Jwt:Audience" "LivingArchive"
@@ -44,16 +44,7 @@ dotnet ef database update --project ../LivingArchive.Infrastructure
 dotnet run
 ```
 
-Backend dostępny pod `http://localhost:5000`.
-
-### 3. Seed bazy danych (opcjonalnie)
-
-```bash
-psql -d living_archive -f seed.sql
-psql -d living_archive -f seed-extra.sql
-```
-
-### 4. Frontend
+### 3. Frontend
 
 ```bash
 cd client
