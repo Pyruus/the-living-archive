@@ -63,10 +63,8 @@ Aplikacja dostępna pod `http://localhost:4200`.
 │   ├── LivingArchive.Infrastructure/  # EF Core, konfiguracje, implementacje serwisów
 │   └── LivingArchive.API/             # Kontrolery, middleware, Program.cs
 ├── client/
-│   └── src/app/
-│       ├── core/                      # Serwisy, modele, stałe, interceptory
-│       ├── features/                  # Strony: explore, upload, collection, admin, auth
-│       └── shared/                    # Komponenty współdzielone: mapa, location-browser
-├── seed.sql                           # Seed: lokalizacje, użytkownicy, zdjęcia Krakowa
-└── seed-extra.sql                     # Seed: dodatkowe zdjęcia dla pozostałych lokalizacji
+    └── src/app/
+        ├── core/                      # Serwisy, modele, stałe, interceptory
+        ├── features/                  # Strony: explore, upload, collection, admin, auth
+        └── shared/                    # Komponenty współdzielone: mapa, location-browser
 ```
